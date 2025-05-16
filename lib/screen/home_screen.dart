@@ -1,10 +1,209 @@
+import 'package:calculator_app/widget/icon_container.dart';
+import 'package:calculator_app/widget/icon_number.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  
+  @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height / 2.60,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [Text('data'), Text('data')],
+                ),
+              ),
+            ),
+            Container(
+              color: Colors.white70,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconContainer(
+                          width: 100,
+                          height: 100,
+                          icon: 'AC',
+                          color: Color.fromRGBO(231, 79, 78, 1),
+                          colorText: Colors.white,
+                        ),
+                        IconContainer(
+                          width: 100,
+                          height: 100,
+                          icon: '(',
+                          color: Colors.white,
+                          colorText: Colors.red,
+                        ),
+                        IconContainer(
+                          width: 100,
+                          height: 100,
+                          icon: ')',
+                          color: Colors.white,
+                          colorText: Colors.red,
+                        ),
+                        IconContainer(
+                          width: 100,
+                          height: 100,
+                          icon: '/',
+                          color: Colors.white,
+                          colorText: Colors.red,
+                        ),
+                      ],
+                    ),
+
+                    Row(
+                      children: [
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '7',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '8',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '9',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconContainer(
+                          width: 100,
+                          height: 100,
+                          icon: '*',
+                          color: Colors.white,
+                          colorText: Colors.red,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '4',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '5',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '6',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconContainer(
+                          width: 100,
+                          height: 100,
+                          icon: '+',
+                          color: Colors.white,
+                          colorText: Colors.red,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '1',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '2',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '3',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconContainer(
+                          width: 100,
+                          height: 100,
+                          icon: '-',
+                          color: Colors.white,
+                          colorText: Colors.red,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        IconContainer(
+                          width: 100,
+                          height: 100,
+                          icon: 'C',
+                          color: Color.fromRGBO(231, 79, 78, 1),
+                          colorText: Colors.white,
+                        ),
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '0',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '.',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                        IconNumber(
+                          width: 100,
+                          height: 100,
+                          icon: '=',
+                          color: Colors.white,
+                          colorText: const Color.fromARGB(255, 54, 82, 244),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
