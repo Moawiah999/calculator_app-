@@ -10,7 +10,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  
+  int output = 0;
+  int input = 0;
+  List<dynamic> numbers = [];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -25,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [Text('data'), Text('data')],
+                  children: [Text(input.toString()), Text(output.toString())],
                 ),
               ),
             ),
@@ -39,6 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconContainer(
+                          onPressed: (p0) {
+                            numbers.clear();
+                          },
                           width: 100,
                           height: 100,
                           icon: 'AC',
@@ -46,6 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: Colors.white,
                         ),
                         IconContainer(
+                          onPressed: (p0) {
+                            numbers.add(p0);
+                          },
                           width: 100,
                           height: 100,
                           icon: '(',
@@ -53,6 +62,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: Colors.red,
                         ),
                         IconContainer(
+                          onPressed: (p0) {
+                            numbers.add(p0);
+                          },
                           width: 100,
                           height: 100,
                           icon: ')',
@@ -60,6 +72,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: Colors.red,
                         ),
                         IconContainer(
+                          onPressed: (p0) {
+                            numbers.add(p0);
+                          },
                           width: 100,
                           height: 100,
                           icon: '/',
@@ -72,6 +87,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       children: [
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(int.parse(p0));
+                          },
                           width: 100,
                           height: 100,
                           icon: '7',
@@ -79,6 +97,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(int.parse(p0));
+                          },
                           width: 100,
                           height: 100,
                           icon: '8',
@@ -86,6 +107,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(int.parse(p0));
+                          },
                           width: 100,
                           height: 100,
                           icon: '9',
@@ -93,6 +117,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconContainer(
+                          onPressed: (p0) {
+                            numbers.add(p0);
+                          },
                           width: 100,
                           height: 100,
                           icon: '*',
@@ -104,6 +131,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       children: [
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(int.parse(p0));
+                          },
                           width: 100,
                           height: 100,
                           icon: '4',
@@ -111,6 +141,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(int.parse(p0));
+                          },
                           width: 100,
                           height: 100,
                           icon: '5',
@@ -118,6 +151,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(int.parse(p0));
+                          },
                           width: 100,
                           height: 100,
                           icon: '6',
@@ -125,6 +161,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconContainer(
+                          onPressed: (p0) {
+                            numbers.add(p0);
+                          },
                           width: 100,
                           height: 100,
                           icon: '+',
@@ -136,6 +175,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       children: [
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(int.parse(p0));
+                          },
                           width: 100,
                           height: 100,
                           icon: '1',
@@ -143,6 +185,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(int.parse(p0));
+                          },
                           width: 100,
                           height: 100,
                           icon: '2',
@@ -150,6 +195,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(int.parse(p0));
+                          },
                           width: 100,
                           height: 100,
                           icon: '3',
@@ -157,6 +205,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconContainer(
+                          onPressed: (p0) {
+                            numbers.add(p0);
+                          },
                           width: 100,
                           height: 100,
                           icon: '-',
@@ -168,6 +219,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       children: [
                         IconContainer(
+                          onPressed: (p0) {},
                           width: 100,
                           height: 100,
                           icon: 'C',
@@ -175,6 +227,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: Colors.white,
                         ),
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(int.parse(p0));
+                          },
                           width: 100,
                           height: 100,
                           icon: '0',
@@ -182,6 +237,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconNumber(
+                          onPressed: (p0) {
+                            numbers.add(p0);
+                          },
                           width: 100,
                           height: 100,
                           icon: '.',
@@ -189,6 +247,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           colorText: const Color.fromARGB(255, 54, 82, 244),
                         ),
                         IconNumber(
+                          onPressed: (p0) {
+                            print(numbers);
+                          },
                           width: 100,
                           height: 100,
                           icon: '=',
